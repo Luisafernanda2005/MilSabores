@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carrito de compras</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="src/assets/css/style.css"></head>
+<body>
+    <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+        <img src="img/logo.png" alt="Logo 1000 Sabores" width="40" height="40" class="me-2">
+        1000 Sabores
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+            <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link position-relative" href="carrito.html">🛒 Carrito<span class="badge bg-danger rounded-pill position-absolute top-0 start-100 translate-middle">0</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main class="py-4">
+    <div class="container">
+      <h2 class="mb-3">Carrito</h2>
+
+      <div class="table-responsive">
+        <table class="table align-middle">
+          <thead class="table-light">
+            <tr>
+              <th>Producto</th>
+              <th>Código</th>
+              <th class="text-end">Precio</th>
+              <th style="width:120px;">Cantidad</th>
+              <th class="text-end">Subtotal</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="carrito-body"><!-- filas con JS --></tbody>
+        </table>
+      </div>
+
+      <div class="d-flex justify-content-between align-items-center mt-3">
+        <button id="btn-vaciar" class="btn btn-outline-danger">Vaciar carrito</button>
+        <div class="text-end">
+          <div class="fs-5">Total: <strong id="total">$0</strong></div>
+          <button id="btn-pagar" class="btn btn-success mt-2">Ir a pagar</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Orden IMPORTANTE de scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="src/assets/js/database.js"></script>  <!-- catálogo (productos) -->
+  <script src="src/assets/js/carrito.js"></script>   <!-- funciones del carrito -->
+
+</body>
+</html>
