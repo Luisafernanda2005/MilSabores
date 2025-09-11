@@ -5,18 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Registro - Pastelería 1000 Sabores</title>
 
-  <!-- CSS global (tu style.css que ya contiene la paleta/fuentes) -->
-  <link rel="stylesheet" href="src/assets/css/style.css">
+
 
   <!-- Bootstrap (usa la misma versión que usas en el proyecto) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS global (tu style.css que ya contiene la paleta/fuentes) -->
+  <link rel="stylesheet" href="src/assets/css/style.css">
 </head>
 <body>
-  <!-- Barra superior (login/registro) -->
-  <div class="topbar text-end pe-3 pt-1 small">
-    <a href="login.html" class="me-2">Iniciar sesión</a> |
-    <a href="registro.html" class="ms-2">Registrar usuario</a>
-  </div>
+
 
   <!-- Navbar (mismo navbar del sitio) -->
   <nav class="navbar navbar-expand-lg navbar-dark">
@@ -63,6 +60,10 @@
               <input type="text" id="name" name="name" class="form-control" maxlength="100" required aria-describedby="nameHelp">
               <div class="invalid-feedback" id="nameError"></div>
             </div>
+            <div class="mb-3">
+              <label for="nacimiento" class="form-label">Fecha de nacimiento</label>
+              <input type="date" class="form-control" id="nacimiento" name="nacimiento" required>
+            </div>
 
             <!-- Correo -->
             <div class="mb-3">
@@ -99,6 +100,10 @@
               <div class="invalid-feedback" id="phoneError"></div>
             </div>
 
+            <div class="mb-3">
+              <label for="codigo" class="form-label">Código de descuento</label>
+              <input type="text" class="form-control" id="codigo" name="codigo" placeholder="Ingresa tu código">
+            </div>
             <!-- Regiones / Comunas (pobladas por JS) -->
             <div class="row">
               <div class="col-12 col-md-6 mb-3">
