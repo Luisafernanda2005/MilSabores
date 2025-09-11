@@ -1,3 +1,4 @@
+/*Validaciones del Registro */
 /*Validación del correo */
 function validarCorreo(correo){
     const regex= /^[\w.+-]+@(duocuc\.cl|duoc\.cl|profesor\.duoc\.cl|gmail\.com)$/i;
@@ -73,13 +74,14 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         confInput.setCustomValidity(''); // limpia el error
     }
-}
+ }
 
     /*Para escuchar mientras el usuario escribe */
 
-    passInput.addEventListener('input', validarPassword);
-    confInput.addEventListener('input', validarPassword);
+   if (passInput) passInput.addEventListener('input', validarPassword);
+    if (confInput) confInput.addEventListener('input', validarPassword);
 
+    if (form){
     form.addEventListener('submit', function(event){
         event.preventDefault();
     
@@ -142,8 +144,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
   showAlert(html, "success");
 
+});
+
+
+    }
+
+});
+
+
+/*Validaciones del login */
+document.addEventListener("DOMContentLoaded", () => {
+const loginForm = document.getElementById("loginForm");
+const loginAlert = document.getElementById("loginAlert");
+
+if(loginForm){
+    loginForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if (email === "" || password === "") {
+        loginAlert.className = "alert alert-danger";
+        loginAlert.textContent = "Por favor completa todos los campos.";
+        loginAlert.classList.remove("d-none");
+        return;
+      }
+
+      // Ejemplo de validación ficticia
+      if (email === "admin@correo.com" && password === "1234") {
+        loginAlert.className = "alert alert-success";
+        loginAlert.textContent = "Inicio de sesión exitoso.";
+        loginAlert.classList.remove("d-none");
+      } else {
+        loginAlert.className = "alert alert-danger";
+        loginAlert.textContent = "Correo o contraseña incorrectos.";
+        loginAlert.classList.remove("d-none");
+      }
+
     });
     
-    
 
+    }
 });
