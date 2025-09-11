@@ -1,0 +1,259 @@
+/* ===========================
+   Tipografías locales
+   =========================== */
+@font-face {
+  font-family: 'Lato';
+  src: url('font/Lato/Lato-Bold') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('font/Lato/Lato-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pacifico';
+  src: url('font/Pacifico/Pacifico-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ===========================
+   Base global
+   =========================== */
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #FFF5E1; /* Crema pastel */
+  color: #5D4037; /* Marrón oscuro */
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Pacifico', cursive;
+  color: #8B4513; /* Chocolate */
+}
+
+p {
+  color: #5D4037;
+}
+
+.text-secondary {
+  color: #B0BEC5 !important;
+}
+
+/* ===========================
+   Navbar
+   =========================== */
+nav {
+  background-color: #8B4513; /* Chocolate */
+}
+
+nav a {
+  color: white !important;
+  font-weight: bold;
+}
+
+.navbar .badge {
+  font-size: 0.75rem;
+}
+
+/* ===========================
+   Hero (Index)
+   =========================== */
+.hero {
+  background-color: #FFF5E1;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #8B4513; 
+}
+
+
+.hero p {
+  font-size: 1.1rem;
+}
+
+/* ===========================
+   Secciones
+   =========================== */
+section {
+  padding: 40px 20px;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ===========================
+   Cards
+   =========================== */
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 20px 0;
+  border: 1px solid #FFC0CB; /* borde rosa suave */
+}
+
+.card-title {
+  font-family: 'Pacifico', cursive;
+  color: #8B4513;
+}
+
+.card-text {
+  color: #5D4037;
+}
+
+/* ===========================
+   Botones personalizados
+   =========================== */
+/* Estilo para botón */
+.btn-custom {
+  display: inline-block;
+  background-color: #8B4513;   /* Chocolate */
+  color: #ffffff;              /* Texto blanco */
+  font-weight: bold;
+  border: 2px solid #5D2F0A;  /* Borde un poco más oscuro */
+  border-radius: 8px;           
+  padding: 10px 20px;           
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+
+  /* Efecto 3D */
+  box-shadow: 0 4px #5D2F0A;   /* Sombra debajo del botón */
+  transition: all 0.1s ease;   /* Transición rápida para el efecto de clic */
+}
+
+/* Hover opcional */
+.btn-custom:hover {
+  background-color: #6B2F0A;   /* Chocolate más oscuro */
+  color: #ffffff;
+  border-color: #5D2F0A;
+}
+
+/* Presionado: simula que se hunde */
+.btn-custom:active {
+  transform: translateY(4px);  /* Baja el botón */
+  box-shadow: 0 0 #5D2F0A;     /* Sombra desaparece */
+}
+
+
+
+/* ===========================
+   Blogs
+   =========================== */
+.blog-list .card {
+  border-left: 6px solid #8B4513; /* acento lateral */
+}
+
+.blog-list img {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+/* ===========================
+   Carrito
+   =========================== */
+.cart-table {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.cart-table th {
+  background: #8B4513;
+  color: white;
+  text-align: center;
+}
+
+.cart-table td {
+  vertical-align: middle;
+  color: #5D4037;
+}
+
+.cart-total {
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: right;
+  margin-top: 20px;
+}
+
+/* ===========================
+   Contacto
+   =========================== */
+.contact-info p {
+  margin: 5px 0;
+  color: #5D4037;
+}
+
+.contact-info strong {
+  color: #8B4513;
+}
+
+/* ===========================
+   Footer
+   =========================== */
+footer {
+  background-color: #8B4513; /* Chocolate */
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+/* ===========================
+   Imágenes generales
+   =========================== */
+.carousel-inner img {
+  height: 400px;
+  object-fit: cover;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .carousel-inner img {
+    height: 250px;
+  }
+
+  .hero .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .blog-list img {
+    margin-top: 15px;
+  }
+}
+
+/* ===========================
+   Barra login/registro
+   =========================== */
+.topbar {
+  background-color: #FFC0CB;   /* Rosa suave */
+  color: #5D4037;              /* Marrón oscuro */
+  font-size: 0.9rem;
+  padding: 5px 15px;
+}
+
+.topbar a {
+  color: #5D4037;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.topbar a:hover {
+  text-decoration: underline;
+}
