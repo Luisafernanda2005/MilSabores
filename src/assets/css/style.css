@@ -257,3 +257,20 @@ footer {
 .topbar a:hover {
   text-decoration: underline;
 }
+
+/* Fondo rosa para encabezado Contáctanos */
+.bg-rosa {
+  background-color: #FFC0CB !important; /* Rosa suave */
+  color: #fff !important;               /* Texto blanco */
+
+}
+
+/* Botón Enviar en rosa */
+.btn-rosa {
+  background-color: #FFC0CB !important;
+  color: #fff !important; /* texto blanco */
+  border: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
